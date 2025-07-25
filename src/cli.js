@@ -46,7 +46,7 @@ export function cli(args) {
           });
       }
     )
-    .env("CONTRACTLOADER") // Allows setting options via CONTRACTLOADER_APIKEY etc.
+    .env("SAVECONTRACT") // Allows setting options via SAVECONTRACT_APIKEY etc.
     .help()
     .alias("help", "h")
     .version()
