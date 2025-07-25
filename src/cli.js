@@ -46,7 +46,7 @@ export function cli(args) {
           });
       }
     )
-    .env("SMARTLOADER") // Allows setting options via SMARTLOADER_APIKEY etc.
+    .env("CONTRACTLOADER") // Allows setting options via CONTRACTLOADER_APIKEY etc.
     .help()
     .alias("help", "h")
     .version()

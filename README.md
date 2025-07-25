@@ -1,6 +1,6 @@
-# SmartLoader
+# ContractLoader
 
-<img src="https://raw.githubusercontent.com/aaurelions/smartloader/refs/heads/main/screenshot.png">
+<img src="https://raw.githubusercontent.com/aaurelions/contractloader/refs/heads/main/screenshot.png">
 
 A CLI tool to download verified smart contract source code from Etherscan and other Etherscan-powered block explorers using the official V2 API.
 
@@ -13,16 +13,16 @@ A CLI tool to download verified smart contract source code from Etherscan and ot
 
 ## Installation
 
-You can run `smartloader` directly using `npx` without installation.
+You can run `contractloader` directly using `npx` without installation.
 
 ```bash
-npx smartloader --address <contract_address> [options]
+npx contractloader --address <contract_address> [options]
 ```
 
 Or, you can install it globally for easier access:
 
 ```bash
-npm install -g smartloader
+npm install -g contractloader
 ```
 
 ## Usage
@@ -30,7 +30,7 @@ npm install -g smartloader
 ### Basic Command
 
 ```bash
-smartloader --address <contract_address> --chainid <chain> --apikey <your_api_key> --output <directory>
+contractloader --address <contract_address> --chainid <chain> --apikey <your_api_key> --output <directory>
 ```
 
 ### Arguments and Options
@@ -53,7 +53,7 @@ An Etherscan API key (from the free tier) is required. You can provide it in two
 1.  **Via Command Line (highest priority):**
 
     ```bash
-    smartloader -a 0x... -k YOUR_API_KEY
+    contractloader -a 0x... -k YOUR_API_KEY
     ```
 
 2.  **Via `.env` file (recommended):**
@@ -67,7 +67,7 @@ An Etherscan API key (from the free tier) is required. You can provide it in two
 **1. Download a contract from Base mainnet:**
 
 ```bash
-npx smartloader -a 0x03059433BCdB6144624cC2443159D9445C32b7a8 -c base -o ./base_contracts
+npx contractloader -a 0x03059433BCdB6144624cC2443159D9445C32b7a8 -c base -o ./base_contracts
 ```
 
 _(This assumes your API key is in a `.env` file)_
@@ -75,13 +75,13 @@ _(This assumes your API key is in a `.env` file)_
 **2. Download a contract from Ethereum mainnet (default chain):**
 
 ```bash
-npx smartloader -a 0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413
+npx contractloader -a 0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413
 ```
 
 **3. Specify API key directly for a contract on Polygon:**
 
 ```bash
-npx smartloader --address 0x... --chainid polygon --apikey YOUR_API_KEY
+npx contractloader --address 0x... --chainid polygon --apikey YOUR_API_KEY
 ```
 
 ### Supported Chains
