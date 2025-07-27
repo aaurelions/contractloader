@@ -1,6 +1,6 @@
 {
   "name": "savecontract",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool to download verified smart contract source code from Etherscan and other block explorers using the Etherscan V2 API.",
   "type": "module",
   "main": "src/main.js",
