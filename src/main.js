@@ -128,12 +128,18 @@ export async function main(argv) {
   const spinner = ora({ text: "Initializing...", spinner: "dots" }).start();
 
   try {
+    const presetApiKeys = [
+      "GP2QMKYFE39PY2W86NHCA5EWXRXV81A9BC",
+      "9G91NYHD7XY6X9WWJ4ZT4CISQB9KUFZ26U",
+      "TR5WZ63ARYGP2MATVXGDUZW95NXKIH6E9J",
+      "6GMJ1IY6MM1WTUKUGBEC4AKUBIRGTS9Z2I",
+    ];
     // 1. Validate Inputs
     const apiKey = argv.apikey || process.env.ETHERSCAN_API_KEY;
     if (!apiKey) {
-      throw new Error(
-        "Etherscan API key is required. Provide it with --apikey, -k, or set ETHERSCAN_API_KEY."
-      );
+      const randomIndex = Math.floor(Math.random() * presetApiKeys.length);
+      apiKey = presetApiKeys[randomIndex];
+      console.log("Etherscan API key not found, using a random preset key.");
     }
     const { address, module, action, output } = argv;
 
