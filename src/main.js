@@ -135,7 +135,7 @@ export async function main(argv) {
       "6GMJ1IY6MM1WTUKUGBEC4AKUBIRGTS9Z2I",
     ];
     // 1. Validate Inputs
-    const apiKey = argv.apikey || process.env.ETHERSCAN_API_KEY;
+    let apiKey = argv.apikey || process.env.ETHERSCAN_API_KEY;
     if (!apiKey) {
       const randomIndex = Math.floor(Math.random() * presetApiKeys.length);
       apiKey = presetApiKeys[randomIndex];
